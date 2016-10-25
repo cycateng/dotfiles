@@ -18,3 +18,38 @@ set hidden "ファイルの保存をしていなくても、他のファイル�
 set virtualedit=block "文字のないところにカーソル移動できる
 set whichwrap=b,s,[,],<,> "カーソルの回り込みができる
 
+"vundleを利用したプラグインのインストール
+"set nocompatible
+"filetype off
+
+"set rtp+=~/vimfiles/vundle.git/ "vundleの場所
+"call vundle#rc()
+"Bundle 'Shougo/neocomplcache' "Bundleは使用するプラグインを書く。
+"Bundle 'Shougo/unite.vim'
+"Bundle 'thinca/vim-ref'
+"BUndle 'thinca/vim-quickrun'
+"filetype plugin indent on " required!
+
+"NeoBundle
+set nocompatible
+
+if has('vim_starting')
+        set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" NeoBundleの設定開始
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" NeoBundleのバージョンを自身で管理する
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" インストールしたいプラグインを記述
+NeoBundle 'Shougo/unite.vim' "unite.vimのインストール
+
+" NeoBundleの設定終了
+call neobundle#end()
+
+filetype plugin indent on
+
+" vim起動時に未インストールのプラグインをインストールする
+NeoBundleCheck
