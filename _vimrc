@@ -63,6 +63,38 @@ endif
 syntax enable
 hi PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
 
+" vimprocのインストール
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\   'windows' : 'tools\\update-dll-mingw',
+\   'cygwin' : 'make -f make_cygwin.mak',
+\   'mac' : 'make',
+\   'linux' : 'make',
+\   'unix' : 'gmake',
+\   }
+\}
+
+" neocomplete.vim
+if has('lua')
+        NeoBundleLazy 'Shougo/neocomplete.vim', {
+                                \'depends' : 'Shougo/vimproc',
+                                \'autoload' : 'Shougo/vimproc',
+                                \}
+endif
+
+" neocomplete {{{
+let g:neocomplete#enable_at_startup                 =1
+let g:neocomplete#auto_completion_start_length      =3
+let g:neocomplete#enable_ignore_case                =1
+let g:neocomplete#enable_smart_case                 =1
+let g:neocomplete#enable_camel_case                 =1
+let g:neocomplete#use_vimproc                       =1
+let g:neocomplete#sources#buffer#cache_limit_size   =1000000
+let g:neocomplete#sources#tags#cache_limit_size     =30000000
+let g:neocomplete#enable_fuzzy_completion           =1
+let g:neocomplete#lock_buffer_name_pattern          = '\*ku\*'
+" }}}
+
 " NeoBundleの設定終了
 call neobundle#end()
 
