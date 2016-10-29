@@ -2,4 +2,6 @@ molokai
 neobundle.vim
 unite-colorscheme
 unite.vim
+vimproc
 vimproc.vim
+vimshell

@@ -95,6 +95,21 @@ let g:neocomplete#enable_fuzzy_completion           =1
 let g:neocomplete#lock_buffer_name_pattern          = '\*ku\*'
 " }}}
 
+" vimshell
+NeoBundleLazy 'Shougo/vimshell', {
+                        \ 'depends' : 'Shougo/vimproc',
+                        \ 'autoload' : {
+                        \   'commands' : [{ 'name' : 'VimShell', 'complete' : 'customlist,vimshell#complete'},
+                        \ 'VimShellExecute', 'VimShellInteractive',
+                        \ 'VimShellTerminal', 'VimShellPop'],
+                        \   'mappings' : ['<Plug>{vimshell_switch)']
+                        \ }}
+
+" vimshell {{{
+nmap <silent> vs :<C-u>VimShell<CR>
+nmap <silent> vp :<C-u>VimShellPop<CR>
+" }}}
+
 " NeoBundleの設定終了
 call neobundle#end()
 
