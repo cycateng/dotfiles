@@ -93,6 +93,8 @@ g:neobundle#types#hg#default_protocol	neobundle.txt	/*g:neobundle#types#hg#defau
 g:neobundle#types#raw#calc_hash_command	neobundle.txt	/*g:neobundle#types#raw#calc_hash_command*
 g:neobundle#types#svn#command_path	neobundle.txt	/*g:neobundle#types#svn#command_path*
 g:unite_abbr_highlight	unite.txt	/*g:unite_abbr_highlight*
+g:unite_colorscheme_blacklist	unite-colorscheme.txt	/*g:unite_colorscheme_blacklist*
+g:unite_colorscheme_command	unite-colorscheme.txt	/*g:unite_colorscheme_command*
 g:unite_converter_file_directory_width	unite.txt	/*g:unite_converter_file_directory_width*
 g:unite_cursor_line_time	unite.txt	/*g:unite_cursor_line_time*
 g:unite_data_directory	unite.txt	/*g:unite_data_directory*
@@ -336,6 +338,10 @@ unite-action-uri	unite.txt	/*unite-action-uri*
 unite-action-window	unite.txt	/*unite-action-window*
 unite-action-word	unite.txt	/*unite-action-word*
 unite-actions	unite.txt	/*unite-actions*
+unite-colorscheme	unite-colorscheme.txt	/*unite-colorscheme*
+unite-colorscheme-customizing	unite-colorscheme.txt	/*unite-colorscheme-customizing*
+unite-colorscheme-introduction	unite-colorscheme.txt	/*unite-colorscheme-introduction*
+unite-colorscheme.txt	unite-colorscheme.txt	/*unite-colorscheme.txt*
 unite-commands	unite.txt	/*unite-commands*
 unite-contents	unite.txt	/*unite-contents*
 unite-create-filter	unite.txt	/*unite-create-filter*
