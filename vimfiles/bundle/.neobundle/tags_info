@@ -5,3 +5,4 @@ unite.vim
 vimproc
 vimproc.vim
 vimshell
+yankround.vim

@@ -100,7 +100,7 @@ NeoBundleLazy 'Shougo/vimshell', {
                         \ 'depends' : 'Shougo/vimproc',
                         \ 'autoload' : {
                         \   'commands' : [{ 'name' : 'VimShell', 'complete' : 'customlist,vimshell#complete'},
-                        \ 'VimShellExecute', 'VimShellInteractive',
+                       \ 'VimShellExecute', 'VimShellInteractive',
                         \ 'VimShellTerminal', 'VimShellPop'],
                         \   'mappings' : ['<Plug>{vimshell_switch)']
                         \ }}
@@ -108,6 +108,18 @@ NeoBundleLazy 'Shougo/vimshell', {
 " vimshell {{{
 nmap <silent> vs :<C-u>VimShell<CR>
 nmap <silent> vp :<C-u>VimShellPop<CR>
+" }}}
+
+" yankround
+NeoBundle 'LeafCage/yankround.vim'
+
+" yankround.vim {{{
+nmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
+let g:yankround_max_history = 100
+nnoremap <Leader><C-p> :<C-u>Unite yankround<CR>
 " }}}
 
 " NeoBundleの設定終了
