@@ -122,6 +122,9 @@ let g:yankround_max_history = 100
 nnoremap <Leader><C-p> :<C-u>Unite yankround<CR>
 " }}}
 
+" vim-autoclose
+NeoBundle 'Townk/vim-autoclose'
+
 " NeoBundleの設定終了
 call neobundle#end()
 

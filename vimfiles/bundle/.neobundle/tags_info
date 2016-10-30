@@ -2,6 +2,7 @@ molokai
 neobundle.vim
 unite-colorscheme
 unite.vim
+vim-autoclose
 vimproc
 vimproc.vim
 vimshell
