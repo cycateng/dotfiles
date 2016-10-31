@@ -64,6 +64,7 @@ syntax enable
 hi PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
 
 " vimprocのインストール
+" vimを非同期処理による高速化プラグイン
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \   'windows' : 'tools\\update-dll-mingw',
@@ -75,6 +76,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 \}
 
 " neocomplete.vim
+" 補完機能プラグイン　<C-n>, <C-p>
 if has('lua')
         NeoBundleLazy 'Shougo/neocomplete.vim', {
                                 \'depends' : 'Shougo/vimproc',
@@ -96,6 +98,7 @@ let g:neocomplete#lock_buffer_name_pattern          = '\*ku\*'
 " }}}
 
 " vimshell
+" vimでコンソールを起動するプラグイン　vpで起動
 NeoBundleLazy 'Shougo/vimshell', {
                         \ 'depends' : 'Shougo/vimproc',
                         \ 'autoload' : {
@@ -111,6 +114,8 @@ nmap <silent> vp :<C-u>VimShellPop<CR>
 " }}}
 
 " yankround
+" ヤンク履歴を保持するプラグイン 
+" ペースト後に<C-p>, <C-n>で起動
 NeoBundle 'LeafCage/yankround.vim'
 
 " yankround.vim {{{
@@ -123,7 +128,13 @@ nnoremap <Leader><C-p> :<C-u>Unite yankround<CR>
 " }}}
 
 " vim-autoclose
+" 括弧など自動で閉じるプラグイン
 NeoBundle 'Townk/vim-autoclose'
+
+" emmet-vim (html)
+" html/cssで使えるプラグイン
+" 参照：http://qiita.com/alpaca_taichou/items/056a4c42fe7a928973e6
+NeoBundle 'mattn/emmet-vim'
 
 " NeoBundleの設定終了
 call neobundle#end()
