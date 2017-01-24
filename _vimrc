@@ -1,3 +1,4 @@
+"cycateng
 "#####表示設定#####
 set number "行番号を表示する
 set title "編集中のファイル名を表示
