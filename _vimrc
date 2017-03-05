@@ -20,6 +20,24 @@ set hidden "ファイルの保存をしていなくても、他のファイル�
 set virtualedit=block "文字のないところにカーソル移動できる
 set whichwrap=b,s,[,],<,> "カーソルの回り込みができる
 
+set hlsearch "検索結果のハイライト表示
+nnoremap <ESC><ESC> :nohlsearch<CR>
+"esc2回でハイライトを消す
+
+"エラー時のビープ音削除
+set visualbell t_vb=
+set noerrorbells
+
+"検索語が画面の真ん中に来るようにする
+nmap n nzz 
+nmap N Nzz 
+nmap * *zz 
+nmap # #zz 
+nmap g* g*zz 
+nmap g# g#zz
+
+inoremap <silent> jj <ESC> "j 2回でインサートモードからコマンドモードへ移行
+
 "vundleを利用したプラグインのインストール
 "set nocompatible
 "filetype off
