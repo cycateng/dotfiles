@@ -1,0 +1,11 @@
+[user]
+	name = cycateng
+	email = cyber.gcw@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[color]
+	diff = auto
+[alias]
+    glog = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%c' --all --graph
