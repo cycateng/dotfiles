@@ -172,7 +172,7 @@ esac
 # コマンドの成否表示設定
 autoload -Uz colors
 colors
-PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})[%n@%m]%{${reset_color}%}%c %# "
+PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})[cycat@%m]%{${reset_color}%}%c %# "
 
 
 
