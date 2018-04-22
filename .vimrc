@@ -38,4 +38,11 @@ nmap g# g#zz
 
 inoremap <silent> jj <ESC> "j 2回でインサートモードからコマンドモードへ移行
 
+" カラースキームをmolokaiに変える
+colorscheme molokai
 
+" Shift-TABで逆タブ
+imap <S-Tab> <C-d>
+
+" 背景を投下するプラグインSeiya.vimを自動的にEnableにする
+let g:seiya_auto_enable=1
