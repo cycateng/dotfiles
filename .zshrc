@@ -149,6 +149,9 @@ elif which putclip >/dev/null 2>&1 ; then
     alias -g C='| putclip'
 fi
 
+# git関連のエイリアス
+alias gl="git glog"
+
 
 
 ########################################
