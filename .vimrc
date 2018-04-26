@@ -4,10 +4,13 @@ set number "行番号を表示する
 set title "編集中のファイル名を表示
 set showmatch "括弧入力時の対応する括弧を表示
 syntax on "コードの色分け
-set tabstop=4 "インデントをスペース4つ分に設定
-set shiftwidth=4
+set tabstop=2 "インデントをスペース4つ分に設定
+set shiftwidth=2
 set expandtab "tabを半角スペースで挿入
 set smartindent "オートインデント
+set cursorline "カーソルラインをハイライト
+set ruler "カーソルの位置を数値で表示
+set laststatus=2 "ファイル名を表示する
 
 "#####検索設定#####
 set ignorecase "大文字/小文字の区別なく検索する
@@ -19,6 +22,7 @@ set nrformats-=octal "0始まる数値を8進数として扱わない
 set hidden "ファイルの保存をしていなくても、他のファイルが開ける
 set virtualedit=block "文字のないところにカーソル移動できる
 set whichwrap=b,s,[,],<,> "カーソルの回り込みができる
+set wildmenu "コマンドモードの補完
 
 set hlsearch "検索結果のハイライト表示
 nnoremap <ESC><ESC> :nohlsearch<CR>
@@ -46,3 +50,6 @@ imap <S-Tab> <C-d>
 
 " 背景を投下するプラグインSeiya.vimを自動的にEnableにする
 let g:seiya_auto_enable=1
+
+" 以下Vim8.0対応
+set backspace=indent,eol,start
