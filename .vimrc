@@ -10,7 +10,23 @@ set expandtab "tabを半角スペースで挿入
 set smartindent "オートインデント
 set cursorline "カーソルラインをハイライト
 set ruler "カーソルの位置を数値で表示
-set laststatus=2 "ファイル名を表示する
+
+"ステータスライン関連:https://qiita.com/tashua314/items/101f1bec368c75a90251
+set statusline+=%F "ファイル名表示 小文字のfでファイル名のみ表示
+set statusline+=%m "変更されているかを表示
+set statusline+=%r "読み込み専用かどうか表示
+set statusline+=%h "ヘルプページが表示されているときに[HELP]と表示
+set statusline+=%w "プレビューウィンドウなら[Preview]と表示
+set statusline+=%= "これ以降は右より
+set statusline+=[%{&fileencoding}] "ファイルの文字コード表示
+set statusline+=[%l/%L] "カーソルの位置表示[現在の行数/全体の行数]
+set laststatus=2 "ステータスラインと常に表示(0:表示しない, 1:ウィンドウが2つ以上のときのみ表示)
+
+"#####エンコード関連#####
+set encoding=utf-8 "ファイルをutf-8で読み込む
+set fileencoding=utf-8 "保存時の文字コード
+set fileencodings=ucs-boms,utf-8,euc-jp,cp932 "読み込み時の文字コード自動判別　左優先
+set fileformats=unix,dos,mac "改行コードの自動判別　左優先
 
 "#####検索設定#####
 set ignorecase "大文字/小文字の区別なく検索する
@@ -53,3 +69,16 @@ let g:seiya_auto_enable=1
 
 " 以下Vim8.0対応
 set backspace=indent,eol,start
+
+" マウスの有効化
+if has('mouse')
+    set mouse=a
+    if has('mouse_sgr')
+        set ttymouse=sgr
+    elseif v:version > 703 || v:version is 703 && has('patch632')
+        set ttymouse=sgr
+    else
+        set ttymouse-xterm2
+    endif
+endif
+
