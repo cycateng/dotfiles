@@ -82,3 +82,4 @@ if has('mouse')
     endif
 endif
 
+hi Comment ctermfg=gray
